@@ -1,0 +1,150 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #052d58;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    width: 100px;
+    border-radius: 10%;
+    align-items: center;
+}
+
+header span {
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+    text-align: center;
+    background-color: black;
+}
+
+nav ul li {
+    margin: 1rem 0;
+}
+
+nav ul li a {
+    color: #dee2e5;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+  
+  main {
+    padding: 1rem;
+  }
+  
+  h1 {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  
+  main div {
+    display: grid;
+    grid-template-areas: ;
+  }
+  .card-sections {
+    
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  }
+  
+  .card {
+    flex: 1 1 ;
+    background-color: #f7f3f3;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .card.certificate {
+    flex: 1 1 100%;
+    background-color: #faf8f8;
+  }
+  
+  .majors ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    gap: 1rem;
+  }
+h1 {
+    color: rgb(7, 50, 107);
+}
+  h2, h3 {
+    background-color: rgb(2, 35, 96);
+    color: white;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  
+  .majors li a {
+    background-color: #444;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 0.25rem;
+  }
+  
+  .majors li a:hover {
+    background-color: #666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  
+  .courses ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .courses li {
+    background-color: #bdd1e854;
+    color: black;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+  }
+  
+  .courses li.red {
+    background-color: rgb(100, 12, 12);
+    color: white;
+  }
+  
+  footer {
+    color: white;
+    background-color: #05404ee1;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
