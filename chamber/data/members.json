@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Sasharity Cakes and Surprises",
+    "address": "31 Ibrahim Odofin Street, Lagos, Nigeria",
+    "phone": "+234 703 684 2318",
+    "website": "https://sasharity.com",
+    "image": "sasharity_cakes.png",
+    "membershipLevel": 3,
+    "description": "Specialized in custom cakes and surprise gift packages."
+  },
+  {
+    "name": "Lagos Tech Hub",
+    "address": "24 Victoria Island, Lagos, Nigeria",
+    "phone": "+234 803 456 7890",
+    "website": "https://lagostechhub.com",
+    "image": "lagostechhub.png",
+    "membershipLevel": 2,
+    "description": "Innovative tech solutions for Lagos businesses."
+  },
+  {
+    "name": "Eko Apparel",
+    "address": "78 Maryland Street, Ikeja, Lagos, Nigeria",
+    "phone": "+234 805 678 9012",
+    "website": "https://ekoapparel.ng",
+    "image": "ekoapparellogo.jpg",
+    "membershipLevel": 1,
+    "description": "Traditional and contemporary Nigerian clothing."
+  },
+  {
+    "name": "Lagos Coffee House",
+    "address": "45 Lekki Phase 1, Lagos, Nigeria",
+    "phone": "+234 807 234 5678",
+    "website": "https://lagoscoffeehouse.com",
+    "image": "lagoscoffeehouse.png",
+    "membershipLevel": 3,
+    "description": "Premium coffee and snacks in a cozy environment."
+  },
+  {
+    "name": "Naija Travels",
+    "address": "10 Airport Road, Ikeja, Lagos, Nigeria",
+    "phone": "+234 809 345 6789",
+    "website": "https://naijatravels.com",
+    "image": "naijatravels.jpg",
+    "membershipLevel": 2,
+    "description": "Tour packages and travel services across Nigeria."
+  },
+  {
+    "name": "Lagos Financial Services",
+    "address": "62 Marina, Lagos Island, Lagos, Nigeria",
+    "phone": "+234 806 789 0123",
+    "website": "https://lagosfinance.com",
+    "image": "lagos_financial_services.png",
+    "membershipLevel": 1,
+    "description": "Expert financial consulting and planning."
+  },
+  {
+    "name": "Eko Market",
+    "address": "100 Balogun Market, Lagos Island, Lagos, Nigeria",
+    "phone": "+234 804 567 8901",
+    "website": "https://ekomarket.ng",
+    "image": "eko_market.jpg",
+    "membershipLevel": 3,
+    "description": "Local fresh produce and artisan products."
+  }
+]

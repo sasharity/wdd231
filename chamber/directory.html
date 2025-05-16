@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lagos State Chamber of Commerce Directory</title>
+  <meta name="description" content="Official directory of members for Lagos State Chamber of Commerce" />
+  <meta name="author" content="Iruoghene Omarayeirue" />
+
+  <meta property="og:title" content="Lagos State Chamber of Commerce Directory" />
+  <meta property="og:description" content="Find local businesses and members of Lagos State's Chamber of Commerce." />
+  <meta property="og:image" content="image/lcci.jpg" />
+  <meta property="og:url" content="https://lagoschamber.com/chamber/directory.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+    <img src="images/lcci.jpg" alt="Lagos Chamber Logo" class="logo" />
+    <h1>Lagos State Chamber of Commerce</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="directory.html">Home</a></li>
+        <li><a href="directory.html" aria-current="page">Directory</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+  <img src="images/keynote-tickets.webp" alt="Keynote Tickets" />
+  </section>
+
+  <main>
+    <section class="info-cards">
+    <div class="info-card" id="events-card">
+    <h2>Events</h2>
+    <p>Upcoming events will be listed here.</p>
+  </div>
+    <div class="info-card" id="current-weather-card">
+    <h2>Current Weather</h2>
+    <img src="images/weather-icon.svg+xml" alt="Weather icon">
+    <div id="currentWeatherDetails">
+</div>
+
+    <p id="currentWeather">Loading...</p>
+  </div>
+    <div class="info-card" id="forecast-card">
+      <h2>Weather Forecast</h2>
+    <div class="weather">
+      <h3>Weather
+          <img src="images/weather-icon.svg+xml" alt="Weather icon">
+      </h3>
+  </div>
+    <p id="weatherForecast">Today: 90 F<br>Tomorrow: 89 F
+  </div>
+</section>
+
+    <section>
+        <div class="view-toggle" role="group" aria-label="View toggle buttons">
+            <button id="gridViewBtn" aria-pressed="true">Grid View</button>
+            <button id="listViewBtn" aria-pressed="false">List View</button>
+        </div>
+        
+        <div id="membersDirectory" class="grid-view">
+        </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-section">
+  <div class="footer-company">
+    <h4>Lagos State Chamber of Commerce</h4>
+    <p> 51 Lagos Island road, Lagos <br>
+        info@lagoschamberofcommerce.com <br>
+        +2347036842318
+    </p>
+  </div>
+
+  <div class="footer-social">
+    <h4>Follow Us</h4>
+    <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+      <img src="images/youtube.svg" alt="YouTube" />
+    </a>
+    <a href="https://x.com" target="_blank" aria-label="X">
+      <img src="images/x.svg" alt="X" />
+    </a>
+    <a href="https://facebook.com" target="_blank" aria-label="facebook">
+      <img src="images/facebook.svg" alt="Facebook" />
+    </a>
+  </div>
+
+  <div class="footer-owner">
+    <p>WDD 231 Class Project</p>
+    <p>Iruoghene Omarayeirue</p>
+    <p>
+      &copy; <span id="currentYear"></span> Iruoghene Omarayeirue | WDD 231
+      Last Modified: <span id="lastModified"></span>
+    </p>
+  </div>
+</div>
+  </footer>
+
+  
+</body>
+</html>
