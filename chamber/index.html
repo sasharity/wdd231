@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lagos State Chamber of Commerce Directory</title>
+  <meta name="description" content="Official directory of members for Lagos State Chamber of Commerce" />
+  <meta name="author" content="Iruoghene Omarayeirue" />
+
+  <meta property="og:title" content="Lagos State Chamber of Commerce Directory" />
+  <meta property="og:description" content="Find local businesses and members of Lagos State's Chamber of Commerce." />
+  <meta property="og:image" content="http://127.0.0.1:5500/chamber/images/lcci.jpg" />
+  <meta property="og:url" content="http://127.0.0.1:5500/chamber/directory.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/getdates.js" defer></script>
+  
+  <script src="scripts/spotlight.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+    <img src="images/lcci.jpg" alt="Lagos Chamber Logo" class="logo" />
+    <p>Lagos State Chamber of Commerce Directory</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html" aria-current="page">Directory</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <img src="images/keynote-tickets.webp" alt="Keynote Tickets" />
+    <div class="call-to-action">
+      <a href="join.html" class="cta-button">Join the Chamber Today</a>
+    </div>
+  </section>
+
+  <main>
+    <section class="events">
+      <h2>Upcoming Events</h2>
+      <p>Check out our latest business networking events and trade expos.</p>
+    </section>
+    <section class="weather">
+      <h2>Current Weather</h2>
+      <div id="currentWeather">
+        <p id="temperature"></p>
+        <!-- My JS work will insert weather info here -->
+      </div>
+      <div id="weatherForecast">
+        <!-- My JS will insert 3-day forecast here -->
+      </div>
+    </section>
+
+    <section class="spotlights">
+      <h2>Member Spotlights</h2>
+      <div id="spotlightContainer" class="spotlight-cards">
+        <!-- My JS will insert spotlight cards here -->
+      </div>
+    </section>
+    <section>
+        <div class="view-toggle" role="group" aria-label="View toggle buttons">
+            <button id="gridViewBtn" aria-pressed="true">Grid View</button>
+            <button id="listViewBtn" aria-pressed="false">List View</button>
+        </div>
+        
+        <div id="membersDirectory" class="grid-view">
+        </div>
+    </section>
+
+    
+
+    <footer>
+    <div class="footer-section">
+      <div class="footer-company">
+        <h4>Lagos State Chamber of Commerce</h4>
+        <p>
+          51 Lagos Island road, Lagos <br>
+          info@lagoschamberofcommerce.com <br>
+          +2347036842318
+        </p>
+      </div>
+
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+          <img src="images/youtube.svg" alt="YouTube" />
+        </a>
+        <a href="https://x.com" target="_blank" aria-label="X">
+          <img src="images/x.svg" alt="X" />
+        </a>
+        <a href="https://facebook.com" target="_blank" aria-label="facebook">
+          <img src="images/facebook.svg" alt="Facebook" />
+        </a>
+      </div>
+
+      <div class="footer-owner">
+        <p>WDD 231 Class Project</p>
+        <p>Iruoghene Omarayeirue</p>
+        <p>
+          &copy; <span id="currentYear"></span> Iruoghene Omarayeirue | WDD 231
+          Last Modified: <span id="lastModified"></span>
+        </p>
+      </div>
+    </div>
+  </footer>
+<script src="scripts/main.js" defer></script>
+<script src="scripts/weather.js" defer></script>
+</body>
+</html>

@@ -1,20 +1,16 @@
-const membersDirectory = document.getElementById('membersDirectory');
-const gridBtn = document.getElementById('gridViewBtn');
-const listBtn = document.getElementById('listViewBtn');
-
-// Fetch and display chamber members
-async function getMembers() {
+//  Fetch and display chamber members
+async function getMembers(membersDirectory) {
   try {
     const response = await fetch("data/members.json");
     if (!response.ok) throw new Error('Network response was not ok');
     const members = await response.json();
-    displayMembers(members);
+    displayMembers(members, membersDirectory);
   } catch (error) {
     membersDirectory.innerHTML = `<p>Failed to load members: ${error.message}</p>`;
   }
 }
 
-function displayMembers(members) {
+function displayMembers(members, membersDirectory) {
   membersDirectory.innerHTML = '';
 
   members.forEach(member => {
@@ -63,59 +59,68 @@ function displayMembers(members) {
   });
 }
 
-// View toggle
-function setGridView() {
+// ✅ View toggle
+function setGridView(membersDirectory, gridBtn, listBtn) {
   membersDirectory.classList.add('grid-view');
   membersDirectory.classList.remove('list-view');
-  gridBtn.setAttribute('aria-pressed', 'true');
-  listBtn.setAttribute('aria-pressed', 'false');
+  gridBtn?.setAttribute('aria-pressed', 'true');
+  listBtn?.setAttribute('aria-pressed', 'false');
 }
 
-function setListView() {
+function setListView(membersDirectory, gridBtn, listBtn) {
   membersDirectory.classList.add('list-view');
   membersDirectory.classList.remove('grid-view');
-  listBtn.setAttribute('aria-pressed', 'true');
-  gridBtn.setAttribute('aria-pressed', 'false');
+  listBtn?.setAttribute('aria-pressed', 'true');
+  gridBtn?.setAttribute('aria-pressed', 'false');
 }
-
-gridBtn.addEventListener('click', setGridView);
-listBtn.addEventListener('click', setListView);
 
 // ✅ Fetch current weather for Lagos
 async function fetchWeather() {
-  const apiKey = "be250fefa01b1695cb50715cd0b1496d";
-  const lat = 6.4541;
-  const lon = 3.3947;
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  const apiKey = '2d4da22b568436fcf7b5811f5290e5bf'; 
+  const lat = 6.52;  
+  const lon = 3.39; 
+  const weatherURL = 'https://api.openweathermap.org/data/2.5/weather?lat=6.52&lon=3.39&exclude=minutely,hourly,alerts&units=imperial&appid=2d4da22b568436fcf7b5811f5290e5bf';
 
   try {
-    const response = await fetch(url);
-    if (!response.ok) throw new Error("Weather fetch failed.");
+    const response = await fetch(weatherURL);
+    if (!response.ok) throw new Error(`Weather fetch failed: ${response.status}`);
+    
     const data = await response.json();
 
-    const weatherDesc = data.weather[0].description;
-    const temp = data.main.temp.toFixed(1);
-    const high = data.main.temp_max.toFixed(1);
-    const low = data.main.temp_min.toFixed(1);
-    const humidity = data.main.humidity;
-    const sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    const sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    if (!data.current) {
+      throw new Error('No current weather data found');
+    }
+
+    const current = data.current;
 
     document.getElementById('currentWeather').innerHTML = `
-      ${weatherDesc.toUpperCase()}<br>
-      🌡 Temp: ${temp}°C (H: ${high}°C, L: ${low}°C)<br>
-      💧 Humidity: ${humidity}%<br>
-      🌅 Sunrise: ${sunrise}<br>
-      🌇 Sunset: ${sunset}
+      ${current.weather[0].description}<br>
+      Temp: ${current.temp}°F
     `;
-  } catch (err) {
+
+    // Continue with forecast display...
+
+  } catch (error) {
+    
     document.getElementById('currentWeather').textContent = "Unable to fetch weather.";
   }
 }
 
-// Initialize on page load
+// ✅ Initialize on page load
 window.addEventListener('DOMContentLoaded', () => {
-  getMembers();
-  setGridView();
-  fetchWeather();
+  const membersDirectory = document.getElementById('membersDirectory');
+  const gridBtn = document.getElementById('gridViewBtn');
+  const listBtn = document.getElementById('listViewBtn');
+
+  if (membersDirectory && gridBtn && listBtn) {
+    gridBtn.addEventListener('click', () => setGridView(membersDirectory, gridBtn, listBtn));
+    listBtn.addEventListener('click', () => setListView(membersDirectory, gridBtn, listBtn));
+    
+    getMembers(membersDirectory);
+    setGridView(membersDirectory, gridBtn, listBtn); // ← ✅ now safe to call
+  } else {
+    console.error("One or more DOM elements are missing.");
+  }
+
+  fetchWeather(); 
 });
