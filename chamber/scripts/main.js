@@ -66,6 +66,13 @@ function setGridView(membersDirectory, gridBtn, listBtn) {
   gridBtn?.setAttribute('aria-pressed', 'true');
   listBtn?.setAttribute('aria-pressed', 'false');
 }
+const menuButton = document.getElementById('menu-toggle');
+const nav = document.getElementById('main-nav');
+
+menuButton.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
+
 
 function setListView(membersDirectory, gridBtn, listBtn) {
   membersDirectory.classList.add('list-view');

@@ -20,6 +20,26 @@ h1 {
   color: #003366;
 }
 
+#main-nav ul {
+  display: none;
+  flex-direction: column;
+}
+
+#main-nav.open ul {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  #main-nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+}
+
 /* Grid layout for form and cards */
 .form-and-cards {
   display: grid;

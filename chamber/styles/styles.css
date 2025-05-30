@@ -73,7 +73,10 @@ nav a[aria-current="page"] {
   padding-bottom: 0.1rem;
 }
 
-
+nav a.active {
+  font-weight: bold;
+  border-bottom: 2px solid #003366;
+}
 
 .header-container {
   display: flex;
@@ -96,12 +99,51 @@ nav a[aria-current="page"] {
   max-height: 400px;
 }
 
+.hero {
+  position: relative;
+  background-image: url('images/keynote-tickets.webp');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+.cta {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: larger;
+}
+
 .info-cards {
   display: flex;
   gap: 1rem;
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 2rem 0;
+}
+
+#main-nav ul {
+  display: none;
+  flex-direction: column;
+}
+
+#main-nav.open ul {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  #main-nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
 }
 
 .info-card {
