@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Join the Lagos State Chamber of Commerce">
+  <title>Join the Chamber - Lagos Chamber</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/chamber.css" />
+  <link rel="stylesheet" href="styles/join.css" />
+  <script src="scripts/join.js" defer></script>
+
+</head>
+<body>
+  <header>
+    <div class="header-container">
+    <img src="images/lcci.jpg" alt="Lagos Chamber Logo" class="logo" />
+    <p>Lagos State Chamber of Commerce Directory</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="directory.html">Home</a></li>
+        <li><a href="directory.html"aria-current="page">Directory</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Apply for Membership</h1>
+
+    <section class="form-and-cards">
+      <form method="get" action="thankyou.html" id="membershipForm">
+        <label>
+          First Name:
+          <input type="text" name="firstname" required title="Enter your first name" autocomplete="given-name" />
+        </label>
+
+        <label>
+          Last Name:
+          <input type="text" name="lastname" required title="Enter your last name" autocomplete="family-name" />
+        </label>
+
+        <label>
+          Organizational Title:
+          <input type="text" name="orgtitle" title="Enter your title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" />
+        </label>
+
+        <label>
+          Email:
+          <input type="email" name="email" required title="Enter your email" autocomplete="email" placeholder="name@example.com" />
+        </label>
+
+        <label>
+          Mobile Phone:
+          <input type="tel" name="phone" required title="Enter your mobile phone number" autocomplete="tel" />
+        </label>
+
+        <label>
+          Organization Name:
+          <input type="text" name="organization" required title="Enter your organization name" autocomplete="organization" />
+        </label>
+
+        <label>
+          Membership Level:
+          <select name="membership" required title="Select your membership level">
+            <option value="" disabled selected>Choose a level</option>
+            <option value="NP">NP Membership (Free for non-profits)</option>
+            <option value="Bronze">Bronze Membership</option>
+            <option value="Silver">Silver Membership</option>
+            <option value="Gold">Gold Membership</option>
+          </select>
+        </label>
+
+        <label>
+          Business Description:
+          <textarea name="description" title="Describe your business"></textarea>
+        </label>
+
+        <input type="hidden" name="timestamp" id="timestamp" />
+
+        <input type="submit" value="Apply Now" />
+      </form>
+
+      <!-- Membership Cards -->
+      <section class="membership-cards">
+        <div class="card" id="npCard">
+          <h2>NP Membership</h2>
+          <p>No fee. Ideal for non-profits.</p>
+          <a href="#npModal">More Info</a>
+        </div>
+
+        <div class="card" id="bronzeCard">
+          <h2>Bronze Membership</h2>
+          <p>Basic benefits and directory listing.</p>
+          <a href="#bronzeModal">More Info</a>
+        </div>
+
+        <div class="card" id="silverCard">
+          <h2>Silver Membership</h2>
+          <p>Includes event access and spotlights.</p>
+          <a href="#silverModal">More Info</a>
+        </div>
+
+        <div class="card" id="goldCard">
+          <h2>Gold Membership</h2>
+          <p>All-inclusive benefits and advertising.</p>
+          <a href="#goldModal">More Info</a>
+        </div>
+      </section>
+    </section>
+
+    <dialog id="npModal" class="modal">
+      <h2>NP Membership Benefits</h2>
+      <ul>
+        <li>Free listing</li>
+        <li>Invitations to select events</li>
+        <li>Recognition as a non-profit partner</li>
+      </ul>
+      <button onclick="document.getElementById('npModal').close()">Close</button>
+    </dialog>
+
+    <dialog id="bronzeModal" class="modal">
+      <h2>Bronze Membership Benefits</h2>
+      <ul>
+        <li>Event participation</li>
+        <li>Business directory listing</li>
+        <li>Newsletter spotlight</li>
+      </ul>
+      <button onclick="document.getElementById('bronzeModal').close()">Close</button>
+    </dialog>
+
+    <dialog id="silverModal" class="modal">
+      <h2>Silver Membership Benefits</h2>
+      <ul>
+        <li>All Bronze benefits</li>
+        <li>Advertising space</li>
+        <li>Event discounts</li>
+      </ul>
+      <button onclick="document.getElementById('silverModal').close()">Close</button>
+    </dialog>
+
+    <dialog id="goldModal" class="modal">
+      <h2>Gold Membership Benefits</h2>
+      <ul>
+        <li>All Silver benefits</li>
+        <li>Keynote speaking opportunities</li>
+        <li>Premium ad placement</li>
+      </ul>
+      <button onclick="document.getElementById('goldModal').close()">Close</button>
+    </dialog>
+
+  </main>
+
+  <footer>
+    <div class="footer-section">
+      <div class="footer-company">
+        <h4>Lagos State Chamber of Commerce</h4>
+        <p>
+          51 Lagos Island road, Lagos <br>
+          info@lagoschamberofcommerce.com <br>
+          +2347036842318
+        </p>
+      </div>
+
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+          <img src="images/youtube.svg" alt="YouTube" />
+        </a>
+        <a href="https://x.com" target="_blank" aria-label="X">
+          <img src="images/x.svg" alt="X" />
+        </a>
+        <a href="https://facebook.com" target="_blank" aria-label="facebook">
+          <img src="images/facebook.svg" alt="Facebook" />
+        </a>
+      </div>
+
+      <div class="footer-owner">
+        <p>WDD 231 Class Project</p>
+        <p>Iruoghene Omarayeirue</p>
+        <p>
+          &copy; <span id="currentYear"></span> Iruoghene Omarayeirue | WDD 231
+          Last Modified: <span id="lastModified"></span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  
+</body>
+</html>

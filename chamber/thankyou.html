@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Thank you for joining the Lagos State Chamber of Commerce">
+  <title>Thank You – Lagos Chamber</title>
+  <link rel="stylesheet" href="styles/chamber.css" />
+  <link rel="stylesheet" href="styles/thankyou.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+
+</head>
+<body>
+  <header>
+    <div class="header-container">
+    <img src="images/lcci.jpg" alt="Lagos Chamber Logo" class="logo" />
+    <p>Lagos State Chamber of Commerce Directory</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="directory.html">Home</a></li>
+        <li><a href="directory.html"aria-current="page">Directory</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="thank-you">
+      <h1>Thank You for Your Application!</h1>
+      <p id="thankMessage"> 
+      </p>
+      <ul id="submissionDetails">
+        <a href="index.html" class="home-button">Return to Homepage</a>
+
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-section">
+      <div class="footer-company">
+        <h4>Lagos State Chamber of Commerce</h4>
+        <p>
+          51 Lagos Island road, Lagos <br>
+          info@lagoschamberofcommerce.com <br>
+          +2347036842318
+        </p>
+      </div>
+
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+          <img src="images/youtube.svg" alt="YouTube" />
+        </a>
+        <a href="https://x.com" target="_blank" aria-label="X">
+          <img src="images/x.svg" alt="X" />
+        </a>
+        <a href="https://facebook.com" target="_blank" aria-label="facebook">
+          <img src="images/facebook.svg" alt="Facebook" />
+        </a>
+      </div>
+
+      <div class="footer-owner">
+        <p>WDD 231 Class Project</p>
+        <p>Iruoghene Omarayeirue</p>
+        <p>
+          &copy; <span id="currentYear"></span> Iruoghene Omarayeirue | WDD 231
+          Last Modified: <span id="lastModified"></span>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const firstName = params.get('firstname') || '';
+    const lastName  = params.get('lastname')  || '';
+    const email     = params.get('email')     || '';
+    const phone     = params.get('phone')     || '';
+    const org       = params.get('organization') || '';
+    const timestamp = params.get('timestamp') || '';
+
+    
+    const thankMessage = document.getElementById('thankMessage');
+    thankMessage.textContent = 
+      `Thank you, ${firstName} ${lastName}, for applying to join the Lagos State Chamber of Commerce!`;
+
+    const detailsList = document.getElementById('submissionDetails');
+    const fields = [
+      { label: 'Email',    value: email },
+      { label: 'Phone',    value: phone },
+      { label: 'Organization', value: org },
+      { label: 'Submitted On', value: new Date(timestamp).toLocaleString() }
+    ];
+
+    fields.forEach(field => {
+      const li = document.createElement('li');
+      li.innerHTML = `<strong>${field.label}:</strong> ${field.value}`;
+      detailsList.appendChild(li);
+    });
+  </script>
+</body>
+</html>
