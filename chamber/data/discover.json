@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Nike Art Gallery",
+    "image": "images/nikeartgallery.webp",
+    "address": "Lekki Peninsula, Lagos, Nigeria",
+    "description": "One of the largest art galleries in West Africa, showcasing contemporary and traditional Nigerian art."
+  },
+  {
+    "name": "Lekki Conservation Centre",
+    "image": "images/lcc.webp",
+    "address": "KM 19 Lekki-Epe Expressway, Lekki Peninsula II, Lagos",
+    "description": "A nature reserve featuring Africa’s longest canopy walkway, picnic areas, and rich wildlife."
+  },
+  {
+    "name": "Freedom Park",
+    "image": "images/freedompark.webp",
+    "address": "Broad Street, Lagos Island, Lagos",
+    "description": "A memorial and leisure park built from a former colonial prison, now hosting concerts and art events."
+  },
+  {
+    "name": "National Museum Lagos",
+    "image": "images/nationalmuseum.webp",
+    "address": "Onikan Road, Lagos Island, Lagos",
+    "description": "Home to important Nigerian artifacts, including traditional sculptures and historical exhibits."
+  },
+  {
+    "name": "Tarkwa Bay Beach",
+    "image": "images/tarkwabay.webp",
+    "address": "Tarkwa Bay Island, Lagos",
+    "description": "A serene and popular beach accessible by boat, known for surfing, relaxation, and its clean environment."
+  },
+  {
+    "name": "Terra Kulture",
+    "image": "images/terrakulture.webp",
+    "address": "1376 Tiamiyu Savage Street, Victoria Island, Lagos",
+    "description": "A Nigerian cultural centre with an art gallery, restaurant, bookshop, and theatre for African-themed plays."
+  },
+  {
+    "name": "Jhalobia Recreation Park and Gardens",
+    "image": "images/jhalobia.webp",
+    "address": "Along Murtala Mohammed Airport Road, Lagos",
+    "description": "A beautifully landscaped park perfect for weddings, events, and family picnics."
+  },
+  {
+    "name": "Omenka Gallery",
+    "image": "images/omenka.webp",
+    "address": "24 Ikoyi Crescent, Ikoyi, Lagos",
+    "description": "A leading art gallery and cultural space for contemporary African art and photography."
+  }
+]

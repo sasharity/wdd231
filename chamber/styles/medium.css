@@ -1,0 +1,59 @@
+
+main > div {
+  background: #eef;
+  padding: 1em;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  border-left: 4px solid #00a;
+}
+
+.discover-grid {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+@media (min-width: 320px) {
+  .discover-grid {
+    grid-template-areas:
+      "card"
+      "card"
+      "card"
+      "card";
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 641px) {
+  .discover-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "card card"
+      "card card"
+      "card card"
+      "card card";
+  }
+}
+
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "card card card card"
+      "card card card card";
+  }
+}
+
+@media (hover: hover) {
+  .card img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+}
