@@ -31,7 +31,6 @@ a:focus {
   text-decoration: underline;
 }
 
-/* Header */
 header {
   background-color: var(--primary-color);
   color: white;
@@ -144,6 +143,7 @@ nav a.active {
   #menu-toggle {
     display: none;
   }
+
 }
 
 .info-card {
@@ -170,7 +170,7 @@ nav a.active {
 }
 
 .view-toggle {
-  text-align: center;
+  text-align: right;
   margin-bottom: 1rem;
 }
 
