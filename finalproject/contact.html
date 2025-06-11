@@ -7,8 +7,9 @@
   <meta name="author" content="Iruoghene Omarayeirue">
   <meta property="og:title" content="LagosToDo - Discover Lagos">
   <meta property="og:description" content="Your local guide to fun and adventure in Lagos.">
-  <meta property="og:image" content="images/hero.webp">
-  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://sasharity.github.io/wdd231/finalproject/images/hero.webp">
+  <meta property="og:type" content="https://sasharity.github.io/wdd231/finalproject/">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
@@ -16,20 +17,21 @@
 </head>
 <body>
   <header>
-    <div class="header-container">
-      <source srcset="images/hero2.webp" media="(min-width: 768px)">
-      <img src="images/hero.webp" alt="Lagos Fun Logo" class="logo" />
+    <div class="hero">
+      <picture>
+      <source srcset="images/hero-large.webp" media="(min-width: 768px)"/>
+      <img src="images/hero.webp" alt="Lagos Fun Logo" loading="lazy" />
+      </picture>
       <p>Lagos Is A City of FUN!</p>
     </div>
     <nav>
-  <button id="menu-toggle" aria-label="Toggle menu">☰ Menu</button>
-  <ul>
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="explore.html">Explore</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
+    <button id="menu-toggle" aria-label="Toggle menu">☰ Menu</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="explore.html">Explore</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    </nav>
   </header>
 
   <main class="contact-page">
