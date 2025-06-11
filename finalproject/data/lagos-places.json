@@ -1,0 +1,109 @@
+{
+  "places": [
+    {
+      "name": "Nike Art Gallery",
+      "type": "Art & Culture",
+      "location": "Lekki",
+      "description": "A vibrant gallery showcasing Nigerian art, crafts, and textiles.",
+      "image": "images/nikeartgallery.webp"
+    },
+    {
+      "name": "Lekki Conservation Centre",
+      "type": "Nature & Adventure",
+      "location": "Lekki",
+      "description": "Home to Africa’s longest canopy walkway and wildlife.",
+      "image": "images/lcc.webp"
+    },
+    {
+      "name": "Terra Kulture",
+      "type": "Theatre & Food",
+      "location": "Victoria Island",
+      "description": "A cultural center for Nigerian food, theatre, and art.",
+      "image": "images/terrakulture.webp"
+    },
+    {
+      "name": "Freedom Park",
+      "type": "History & Events",
+      "location": "Lagos Island",
+      "description": "A former colonial prison turned into a peaceful park for events and history.",
+      "image": "images/freedompark.webp"
+    },
+    {
+      "name": "Elegushi Beach",
+      "type": "Beach",
+      "location": "Lekki",
+      "description": "Popular beach with food, drinks, music, and entertainment.",
+      "image": "images/elegushi-beach.webp"
+    },
+    {
+      "name": "Omenka Gallery",
+      "type": "Art Gallery",
+      "location": "Ikoyi",
+      "description": "Contemporary African art exhibitions and installations.",
+      "image": "images/omenka.webp"
+    },
+    {
+      "name": "Jhalobia Recreation Park",
+      "type": "Gardens & Events",
+      "location": "Ikeja",
+      "description": "Beautiful landscaped gardens and event center.",
+      "image": "images/jhalobia.webp"
+    },
+    {
+      "name": "Hard Rock Cafe Lagos",
+      "type": "Music & Dining",
+      "location": "Victoria Island",
+      "description": "Restaurant with live music and beach view.",
+      "image": "images/hardrock-cafe.webp"
+    },
+    {
+      "name": "National Museum Lagos",
+      "type": "History & Culture",
+      "location": "Onikan",
+      "description": "Museum with Nigerian artifacts and historical exhibitions.",
+      "image": "images/national-museum.webp"
+    },
+    {
+      "name": "Hi-Impact Planet",
+      "type": "Amusement Park",
+      "location": "Mowe (Lagos-Ibadan Expressway)",
+      "description": "Family-friendly theme park with rides, games, and water fun.",
+      "image": "images/hiimpact-planet.webp"
+    },
+    {
+      "name": "Upbeat Centre",
+      "type": "Sports & Fitness",
+      "location": "Lekki",
+      "description": "Trampoline park and fitness center for kids and adults.",
+      "image": "images/upbeat-centre.webp"
+    },
+    {
+      "name": "Bogobiri House",
+      "type": "Art, Music & Culture",
+      "location": "Ikoyi",
+      "description": "Live music venue, boutique hotel, and restaurant celebrating Nigerian culture.",
+      "image": "images/bogobiri.webp"
+    },
+    {
+      "name": "La Campagne Tropicana",
+      "type": "Resort",
+      "location": "Ibeju Lekki",
+      "description": "Luxury beachfront resort offering nature, leisure, and adventure.",
+      "image": "images/lacampagne.webp"
+    },
+    {
+      "name": "Filmhouse Cinemas",
+      "type": "Entertainment",
+      "location": "Various",
+      "description": "Modern cinemas showing Nollywood and international movies.",
+      "image": "images/filmhouse.webp"
+    },
+    {
+      "name": "Makoko Floating Village",
+      "type": "Cultural Experience",
+      "location": "Lagos Mainland",
+      "description": "A unique stilt village offering insight into local life on water.",
+      "image": "images/makoko.webp"
+    }
+  ]
+}

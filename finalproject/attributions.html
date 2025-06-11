@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Attribution & Demo | LagosToDo</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/large.css">
+</head>
+<body>
+  <header>
+    <h1>LagosToDo</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="active" href="attribution.html">Attribution</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="attribution">
+    <section>
+      <h2>Video Demonstration</h2>
+      <p>Watch how LagosToDo helps you find exciting places and activities in Lagos.</p>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8i3ZF3YJtW4" 
+            title="LagosToDo Demo Video" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <section>
+      <h2>Attributions</h2>
+      <ul>
+        <li>Icons by <a href="https://fontawesome.com/" target="_blank">Font Awesome</a></li>
+        <li>Images from:
+          <ul>
+            <li><a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+            <li><a href="https://pexels.com/" target="_blank">Pexels</a></li>
+          </ul>
+        </li>
+        <li>JSON Data: Custom created for the LagosToDo project</li>
+        <li>Project built for WDD 231 - Web Frontend Development II by Iruoghene Omarayeirue</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> LagosToDo</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
